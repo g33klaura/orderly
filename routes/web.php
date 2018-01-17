@@ -13,4 +13,43 @@
 
 Route::get('/', function () {
     return view('welcome');
+    // view will be "mega splash page", no navbar
+});
+
+// [] Create controllers for each next
+Route::get('/dashboard', function () {
+    return view('dashboard');
+    // view will be "dashboard (logged in)"
+});
+
+Route::get('/create-account', function () {
+    return view('create-account');
+    // view will be "create account" screen, not sure what navbar
+});
+
+Route::get('/orders', function () {
+    return view('orders');
+    // view will be "main orders" screen
+});
+
+Route::get('/orders/builder', function () {
+    return view('orders-build');
+    // view will be "new order" screen
+});
+
+Route::get('/products', function () {
+    return view('products');
+    // view will be "products" (combined library and add-new)***
+});
+
+// Route for export PDF?
+Route::get('/orders/export', function () {
+    return view('orders-export');
+    // not sure if exported pdf needs a route and/or view
+});
+
+// This route is EXTRA ~ may not build into app
+Route::get('/products/blanks', function () {
+    return view('blanks');
+    // view will be "add to blanks library"
 });
