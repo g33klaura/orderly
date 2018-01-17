@@ -1,7 +1,6 @@
-<h1 align='center'>Order<span style="color:green">ly</span></h1>
-<!-- Change the above to the logo!!! -->
+<div align="center"><img src="./readme-assets/Orderly-logo.png" /></div>
 
-<div align='center'>description</div>
+<div align='center'>Application to make the process of reordering custom product more... orderly!</div>
 
 ## Deployed Application
 
@@ -14,7 +13,7 @@
 
 ## Technologies Used
 
-Lorem ipsum, dolor sit
+PHP, Laravel, React.js, MySQL
 
 ## Key Features
 
