@@ -14,12 +14,21 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->increments('id');  // Order ID
-            $table->timestamps();  // Order date, or save new column? (Now() with formatting? Redundant?)
+            $table->increments('id');  
+            // Order ID
+
+            $table->timestamps();  
+            // Order date, or save new column? (Now() with formatting? Redundant?)
+
+            $table->decimal('total_cost', 8, 2);
             // Total cost estimate
-            // Design Name
+
+            $table->integer('details_id')->unsigned();
+            $table->foreign('details_id')->references('id')->on('order_details');
             // Foreign Key from order_details table***
-            
+
+            $table->text('notes');
+            // Notes/Comments (maybe do for overall order if easier than allowing comments for each design...)
         });
     }
 
