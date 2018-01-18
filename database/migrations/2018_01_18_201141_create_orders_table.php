@@ -24,11 +24,15 @@ class CreateOrdersTable extends Migration
             // Total cost estimate
 
             $table->integer('details_id')->unsigned();
-            $table->foreign('details_id')->references('id')->on('order_details');
-            // Foreign Key from order_details table***
+            // Foreign key column
 
             $table->text('notes');
             // Notes/Comments (maybe do for overall order if easier than allowing comments for each design...)
+        });
+
+        Schema::table('orders', function($table) {
+            $table->foreign('details_id')->references('id')->on('order_details');
+            // Set foreign Key from order_details table
         });
     }
 

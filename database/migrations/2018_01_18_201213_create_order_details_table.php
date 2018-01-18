@@ -23,8 +23,7 @@ class CreateOrderDetailsTable extends Migration
             // Design Name
 
             $table->integer('design_id')->unsigned();
-            $table->foreign('design_id')->references('id')->on('products');
-            // Design ID (foreign key from products - may be a string not INT***)
+            // Foreign key column (TRIPLE CHECK NAME)
 
             $table->string('department', 80);
             // Department
@@ -79,6 +78,12 @@ class CreateOrderDetailsTable extends Migration
 
             
             // ******How can several rows of date be tied to ONE actual order???? (several products data will tie into here as one order)
+        });
+
+        Schema::table('order_details', function($table) {
+            $table->foreign('design_id')->references('id')->on('products');
+            // Design ID (foreign key from products - may be a string not INT***)
+            // (TRIPLE CHECK NAME)
         });
     }
 
