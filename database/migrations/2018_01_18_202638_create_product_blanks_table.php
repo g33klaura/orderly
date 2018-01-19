@@ -16,6 +16,13 @@ class CreateProductBlanksTable extends Migration
         Schema::create('product_blanks', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+
+            // blanks name
+
+            // blank color
+
+            // product type
+            
         });
     }
 

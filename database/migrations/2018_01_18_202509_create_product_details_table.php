@@ -15,7 +15,22 @@ class CreateProductDetailsTable extends Migration
     {
         Schema::create('product_details', function (Blueprint $table) {
             $table->increments('id');
+
             $table->timestamps();
+
+            // Foreign key ~ design id on products table - patrick says might not need
+
+            // Product type
+
+            // Blank name **actually link to Blanks Table??
+
+            // Blank color
+
+            // Ink colors
+
+            // POS Alias
+
+            // Cost
         });
     }
 

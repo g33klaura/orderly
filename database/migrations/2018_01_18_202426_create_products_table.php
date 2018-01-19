@@ -15,7 +15,26 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
+
             $table->timestamps();
+
+            // Design name
+
+            // Design ID (different than product id for details table)
+
+            // Department
+
+            // Graphic size
+
+            // ink type??
+
+            // Placement*****
+
+            // Image
+
+            // Notes?
+
+            // Foreign key to product details table
         });
     }
 
