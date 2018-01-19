@@ -14,6 +14,8 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            
             $table->increments('id');
             // Leave as 'id'
 
@@ -41,7 +43,7 @@ class CreateProductsTable extends Migration
             $table->text('product_notes');
             // Notes?
 
-            $table->integer('product_details_id')->unsigned();
+            $table->integer('p_details_id')->unsigned();
             // Foreign key to product details table
 
             $table->boolean('favorite_product');
@@ -49,7 +51,7 @@ class CreateProductsTable extends Migration
         });
 
         Schema::table('products', function($table) {
-            $table->foreign('product_details_id')->references('pd_id')->on('product_details');
+            $table->foreign('p_details_id')->references('p_details_id')->on('product_details');
             // Set foreign Key from product_details table
         });
     }

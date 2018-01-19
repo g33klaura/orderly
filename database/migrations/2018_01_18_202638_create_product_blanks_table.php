@@ -14,6 +14,8 @@ class CreateProductBlanksTable extends Migration
     public function up()
     {
         Schema::create('product_blanks', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            
             $table->increments('blanks_id');
             $table->timestamps();
 

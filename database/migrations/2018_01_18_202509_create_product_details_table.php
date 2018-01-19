@@ -14,7 +14,9 @@ class CreateProductDetailsTable extends Migration
     public function up()
     {
         Schema::create('product_details', function (Blueprint $table) {
-            $table->increments('pd_id');
+            $table->engine = 'InnoDB';
+            
+            $table->increments('p_details_id');
             // Is foreign key in Products table (so check before re-naming from 'pd_id'!)
 
             $table->timestamps();
