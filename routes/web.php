@@ -48,7 +48,7 @@ Route::get('/orders/export', function () {
     // not sure if exported pdf needs a route and/or view
 });
 
-// This route is EXTRA ~ may not build into app
+// Route to add blanks used for products (will pull from for drop-down menus in Products Add form)
 Route::get('/products/blanks', function () {
     return view('blanks');
     // view will be "add to blanks library"
