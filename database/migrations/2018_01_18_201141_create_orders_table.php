@@ -28,6 +28,9 @@ class CreateOrdersTable extends Migration
 
             $table->text('notes');
             // Notes/Comments (maybe do for overall order if easier than allowing comments for each design...)
+
+            $table->boolean('favorite_order');
+            // Favorited order
         });
 
         Schema::table('orders', function($table) {

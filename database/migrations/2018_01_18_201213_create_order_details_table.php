@@ -22,8 +22,8 @@ class CreateOrderDetailsTable extends Migration
             $table->string('design_name', 100);
             // Design Name
 
-            $table->integer('design_id')->unsigned();
-            // Foreign key column (TRIPLE CHECK NAME)
+            $table->integer('product_id')->unsigned();
+            // Foreign key column (from Products table)
 
             $table->string('department', 80);
             // Department
@@ -67,11 +67,13 @@ class CreateOrderDetailsTable extends Migration
             $table->smallInteger('qty_3xlarge');
             // Qty-3XLarge
 
-            $table->integer('qty_total');
-            // Total Qty ***but of just whatever product type this row is, or TOTAL order qty?... which number will help designate tiers....
+            $table->integer('qty_total_row');
+            // Total Qty ***but of just whatever product type this row is, or TOTAL order qty? (below) 
+            $table->integer('qty_all_total');
+            // which number will help designate tiers....
 
             $table->decimal('design_cost', 8, 2);
-            // Design Cost
+            // Design cost aka Product cost
 
             $table->text('detail_notes');
             // Notes/Comments
@@ -81,9 +83,8 @@ class CreateOrderDetailsTable extends Migration
         });
 
         Schema::table('order_details', function($table) {
-            $table->foreign('design_id')->references('id')->on('products');
-            // Design ID (foreign key from products - may be a string not INT***)
-            // (TRIPLE CHECK NAME)
+            $table->foreign('product_id')->references('id')->on('products');
+            // Product id (foreign key from Products)
         });
     }
 

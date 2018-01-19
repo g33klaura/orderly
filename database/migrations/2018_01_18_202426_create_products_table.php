@@ -15,26 +15,44 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
+            // Leave as 'id'
 
             $table->timestamps();
 
+            $table->string('product_name', 100);
             // Design name
 
             // Design ID (different than product id for details table)
 
+            $table->string('department', 80);
             // Department
 
+            $table->string('graphic_size', 80);
             // Graphic size
 
-            // ink type??
+            $table->string('ink_type', 40);
+            // Ink type
 
-            // Placement*****
+            $table->string('graphic_placement', 100);
+            // Placement
 
+            $table->string('image');
             // Image
+            // Will need to figure out saving an image path***
 
+            $table->text('product_notes');
             // Notes?
 
+            $table->integer('product_details_id')->unsigned();
             // Foreign key to product details table
+
+            $table->boolean('favorite_product');
+            // Favorited product
+        });
+
+        Schema::table('products', function($table) {
+            $table->foreign('product_details_id')->references('pd_id')->on('product_details');
+            // Set foreign Key from product_details table
         });
     }
 
