@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $name = 'Laura';
+    $age = 34;
+    return view('welcome', compact('name', 'age'));
     // view will be "mega splash page", no navbar
 });
 
