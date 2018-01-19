@@ -34,6 +34,9 @@ class CreateProductDetailsTable extends Migration
             $table->string('product_alias', 80);
             // POS Alias
 
+            $table->string('pos_id', 80);
+            // POS/inventory id (different than product id for details table)
+
             $table->decimal('cost', 8, 2);
             // Cost
 

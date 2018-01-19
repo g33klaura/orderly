@@ -22,8 +22,6 @@ class CreateProductsTable extends Migration
             $table->string('product_name', 100);
             // Design name
 
-            // Design ID (different than product id for details table)
-
             $table->string('department', 80);
             // Department
 

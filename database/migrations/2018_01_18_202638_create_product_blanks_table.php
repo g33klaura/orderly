@@ -17,14 +17,14 @@ class CreateProductBlanksTable extends Migration
             $table->increments('blanks_id');
             $table->timestamps();
 
+            $table->string('blank_type', 100);
+            // product type
+
             $table->string('blank_name', 100);
             // blanks name
 
             $table->string('blank_color', 80);
             // blank color
-
-            $table->string('blank_type', 100);
-            // product type
 
             // Doesn't need foreign key
             // This will render in dropdown on Product Add form, then get re-saved to a Product
