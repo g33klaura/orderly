@@ -20,13 +20,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // =====================================================
 // PRACTICE
-Route::get('/blanks', function () {
-    return response(ProductBlank::all(),200);
-});
-// Route::get('/blanks', 'ProductBlankController@index');
+// Route::get('/blanks', function () {
+//     return response(ProductBlank::all(),200);
+// });
+Route::get('/blanks', 'ProductBlankController@index');
 // Either type of route call works (explicit or with Controller)
+// ^^breaks if I switch to using controller here...............
 
 Route::get('/blanks/{blank}', function ($id) {
     return response(ProductBlank::find($id), 200);
 });
+// Route::get('/blanks/{id}', 'ProductBlankController@show');
 // =====================================================

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ProductBlank;
 
+// All of these methods get put into web & API routes files
 class ProductBlankController extends Controller
 {
     /**
@@ -14,12 +15,15 @@ class ProductBlankController extends Controller
      */
     public function index()
     {
-        // Make sure the model path starts with '\'****
-        $blanks = \App\ProductBlank::all();
+        // web routes method
+        // $blanks = ProductBlank::all();
 
-        foreach ($blanks as $blank) {
-            echo $blank->blank_name . ' ';
-        }
+        // foreach ($blanks as $blank) {
+        //     echo $blank->blank_name . ' ';
+        // }
+
+        // api routes method
+        return response(ProductBlank::all(),200);
     }
 
     /**
@@ -51,7 +55,12 @@ class ProductBlankController extends Controller
      */
     public function show($id)
     {
-        //
+        $blank = ProductBlank::find($id);
+    
+        dd($blank);
+
+        // return view('welcome', compact( 'blank' ));
+        return response('blank', 200);
     }
 
     /**

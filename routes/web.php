@@ -11,33 +11,18 @@
 |
 */
 
+// Route::get('/', 'ProductBlankController@index');
+// ^^or still a return view command
 Route::get('/', function () {
 
-    $blanks = DB::table('product_blanks')->get();
+    // $blanks = DB::table('product_blanks')->get();
     // return $blanks;
 
-    return view('welcome', compact( 'blanks' ));
+    // return view('welcome', compact( 'blanks' ));
+    return view('welcome');
 
     // view will be "mega splash page", no navbar
 });
-
-// =====================================================
-// PRACTICE
-Route::get('/blanks/{id}', function ($id) {
-
-    $blanks = DB::table('product_blanks')->find($id);
-    
-    dd($blanks);
-
-    return view('welcome', compact( 'blanks' ));
-    // Practicing rendering db elements
-});
-
-// Practice model>controller route
-Route::get('/blanks', 'ProductBlankController@index');
-
-// =====================================================
-
 
 
 // [] Create controllers for each next
@@ -80,3 +65,20 @@ Route::get('/products/blanks', function () {
     return view('blanks');
     // view will be "add to blanks library"
 });
+
+// =====================================================
+// PRACTICE
+// Route::get('/blanks/{id}', function ($id) {
+//     $blanks = DB::table('product_blanks')->find($id);
+//     dd($blanks);
+//     return view('welcome', compact( 'blanks' ));
+//     // Practicing rendering db elements
+//     // Need to make this in controller off model
+// });
+
+Route::get('/blanks/{id}', 'ProductBlankController@show');
+
+// Practice model>controller route
+Route::get('/blanks', 'ProductBlankController@index');
+
+// =====================================================
