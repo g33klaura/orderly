@@ -32,9 +32,14 @@ export default class Example extends Component {
                 /* When using list you need to specify a key
                  * attribute that is unique for each list item
                 */
-                <li key={blank.id} >
-                    { blank.blank_name } 
-                </li>      
+                // <li key={blank.id} >
+                //     { blank.blank_name } 
+                // </li>  
+                <tr key={blank.id}>
+                    <td>{blank.blank_type}</td>
+                    <td>{blank.blank_name}</td>
+                    <td>{blank.blank_color}</td>
+                </tr>
             );
         })
     }
@@ -42,27 +47,29 @@ export default class Example extends Component {
     
     render() {
         return (
-            // <div className="container">
-            //     <div className="row">
-            //         <div className="col-md-8 col-md-offset-2">
-            //             <div className="panel panel-default">
-            //                 <div className="panel-heading">Example Component</div>
-
-            //                 <div className="panel-body">
-            //                     I'm an example component!
-            //                 </div>
-            //             </div>
-            //         </div>
-            //     </div>
-            // </div>
-
             <Container>
                 <Row>
                     <Col s={12}>
                         <h1>I'm in Materialize!</h1>
-                        <ul>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col s={12}>
+                        {/*<ul>
                             { this.renderBlanks() }
-                        </ul> 
+                        </ul>*/} 
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Color</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                { this.renderBlanks() }
+                            </tbody>
+                        </table>
                     </Col>
                 </Row>
             </Container>

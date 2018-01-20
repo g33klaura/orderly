@@ -42711,7 +42711,7 @@ var Example = function (_Component) {
             var _this2 = this;
 
             /* fetch API in action */
-            fetch('/api/blanks/62').then(function (response) {
+            fetch('/api/blanks/').then(function (response) {
                 return response.json();
             }).then(function (blanks) {
                 //Fetched blanks is stored in the state
@@ -42726,10 +42726,27 @@ var Example = function (_Component) {
                     /* When using list you need to specify a key
                      * attribute that is unique for each list item
                     */
+                    // <li key={blank.id} >
+                    //     { blank.blank_name } 
+                    // </li>  
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'li',
+                        'tr',
                         { key: blank.id },
-                        blank.blank_name
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'td',
+                            null,
+                            blank.blank_type
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'td',
+                            null,
+                            blank.blank_name
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'td',
+                            null,
+                            blank.blank_color
+                        )
                     )
                 );
             });
@@ -42737,37 +42754,56 @@ var Example = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            return (
-                // <div className="container">
-                //     <div className="row">
-                //         <div className="col-md-8 col-md-offset-2">
-                //             <div className="panel panel-default">
-                //                 <div className="panel-heading">Example Component</div>
-
-                //                 <div className="panel-body">
-                //                     I'm an example component!
-                //                 </div>
-                //             </div>
-                //         </div>
-                //     </div>
-                // </div>
-
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Container"],
+                null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Container"],
+                    __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Row"],
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Row"],
-                        null,
+                        __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Col"],
+                        { s: 12 },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Col"],
-                            { s: 12 },
+                            'h1',
+                            null,
+                            'I\'m in Materialize!'
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Row"],
+                    null,
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Col"],
+                        { s: 12 },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'table',
+                            null,
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'h1',
+                                'thead',
                                 null,
-                                'I\'m in Materialize!'
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'tr',
+                                    null,
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'th',
+                                        null,
+                                        'Type'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'th',
+                                        null,
+                                        'Name'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'th',
+                                        null,
+                                        'Color'
+                                    )
+                                )
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'ul',
+                                'tbody',
                                 null,
                                 this.renderBlanks()
                             )
