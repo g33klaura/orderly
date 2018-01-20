@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Container, Row, Col } from 'react-materialize';
+import { Container, Row, Col, Table, Card } from 'react-materialize';
+import ReactDataGrid from 'react-data-grid';
 
 export default class Example extends Component {
     constructor() {
@@ -57,19 +58,23 @@ export default class Example extends Component {
                     <Col s={12}>
                         {/*<ul>
                             { this.renderBlanks() }
-                        </ul>*/} 
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Name</th>
-                                    <th>Color</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                { this.renderBlanks() }
-                            </tbody>
-                        </table>
+                        </ul>*/}
+                        <div className='card material-table'>
+                        <Card> 
+                            <Table>
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Name</th>
+                                        <th>Color</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    { this.renderBlanks() }
+                                </tbody>
+                            </Table>
+                        </Card>
+                        </div>
                     </Col>
                 </Row>
             </Container>

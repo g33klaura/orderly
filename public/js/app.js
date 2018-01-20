@@ -42777,35 +42777,43 @@ var Example = function (_Component) {
                         __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Col"],
                         { s: 12 },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'table',
-                            null,
+                            'div',
+                            { className: 'card material-table' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'thead',
+                                __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Card"],
                                 null,
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'tr',
+                                    __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Table"],
                                     null,
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'th',
+                                        'thead',
                                         null,
-                                        'Type'
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'tr',
+                                            null,
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'th',
+                                                null,
+                                                'Type'
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'th',
+                                                null,
+                                                'Name'
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'th',
+                                                null,
+                                                'Color'
+                                            )
+                                        )
                                     ),
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'th',
+                                        'tbody',
                                         null,
-                                        'Name'
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'th',
-                                        null,
-                                        'Color'
+                                        this.renderBlanks()
                                     )
                                 )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'tbody',
-                                null,
-                                this.renderBlanks()
                             )
                         )
                     )
