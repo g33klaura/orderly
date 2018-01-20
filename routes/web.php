@@ -21,9 +21,9 @@ Route::get('/', function () {
     // view will be "mega splash page", no navbar
 });
 
-Route::get('/blanks/{blanks_id}', function ($blanks_id) {
+Route::get('/blanks/{id}', function ($id) {
 
-    $blanks = DB::table('product_blanks')->find($blanks_id);
+    $blanks = DB::table('product_blanks')->find($id);
     
     dd($blanks);
 
