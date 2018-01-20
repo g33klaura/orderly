@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\ProductBlank;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,16 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// =====================================================
+// PRACTICE
+Route::get('/blanks', function () {
+    return response(ProductBlank::all(),200);
+});
+// Route::get('/blanks', 'ProductBlankController@index');
+// Either type of route call works (explicit or with Controller)
+
+Route::get('/blanks/{blank}', function ($id) {
+    return response(ProductBlank::find($id), 200);
+});
+// =====================================================
