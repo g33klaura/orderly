@@ -21,6 +21,8 @@ Route::get('/', function () {
     // view will be "mega splash page", no navbar
 });
 
+// =====================================================
+// PRACTICE
 Route::get('/blanks/{id}', function ($id) {
 
     $blanks = DB::table('product_blanks')->find($id);
@@ -28,17 +30,20 @@ Route::get('/blanks/{id}', function ($id) {
     dd($blanks);
 
     return view('welcome', compact( 'blanks' ));
-
-    // view will be "mega splash page", no navbar
+    // Practicing rendering db elements
 });
 
+// Practice model>controller route
+Route::get('/blanks', 'ProductBlankController@index');
 
+// =====================================================
 
 
 
 // [] Create controllers for each next
 // Remember to use php artisan helper function
-// Check how to make a RESOURCES controller*******
+// Check how to make a RESOURCES controller******* (--resource)
+
 Route::get('/dashboard', function () {
     return view('dashboard');
     // view will be "dashboard (logged in)"
