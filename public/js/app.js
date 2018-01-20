@@ -42692,10 +42692,49 @@ var Example = function (_Component) {
     function Example() {
         _classCallCheck(this, Example);
 
-        return _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).apply(this, arguments));
+        //Initialize the state in the constructor
+        var _this = _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).call(this));
+
+        _this.state = {
+            blanks: []
+        };
+        return _this;
     }
+    /*componentDidMount() is a lifecycle method
+     * that gets called after the component is rendered
+     */
+
 
     _createClass(Example, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            /* fetch API in action */
+            fetch('/api/blanks/62').then(function (response) {
+                return response.json();
+            }).then(function (blanks) {
+                //Fetched blanks is stored in the state
+                _this2.setState({ blanks: blanks });
+            });
+        }
+    }, {
+        key: 'renderBlanks',
+        value: function renderBlanks() {
+            return this.state.blanks.map(function (blank) {
+                return (
+                    /* When using list you need to specify a key
+                     * attribute that is unique for each list item
+                    */
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'li',
+                        { key: blank.id },
+                        blank.blank_name
+                    )
+                );
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             return (
@@ -42726,6 +42765,11 @@ var Example = function (_Component) {
                                 'h1',
                                 null,
                                 'I\'m in Materialize!'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'ul',
+                                null,
+                                this.renderBlanks()
                             )
                         )
                     )

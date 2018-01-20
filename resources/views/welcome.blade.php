@@ -82,9 +82,9 @@
                     Testing connections yaaay
                 </div>
 
-                @foreach ($blanks as $blank)
+                {{--  @foreach ($blanks as $blank)
                     <li>{{ $blank->department . " " . $blank->blank_name }}</li>
-                @endforeach
+                @endforeach  --}}
 
 
                 <br />
