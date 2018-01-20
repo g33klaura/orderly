@@ -82,8 +82,12 @@
                     Testing connections yaaay
                 </div>
 
-                <h1>Hi there, <?= $name; ?> who's <?= $age; ?></h1>
+                @foreach ($blanks as $blank)
+                    <li>{{ $blank->department . " " . $blank->blank_name }}</li>
+                @endforeach
 
+
+                <br />
                 <!-- Example React component renders here -->
                 <div id="example"></div>
             </div>

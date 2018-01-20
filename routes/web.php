@@ -12,13 +12,33 @@
 */
 
 Route::get('/', function () {
-    $name = 'Laura';
-    $age = 34;
-    return view('welcome', compact('name', 'age'));
+
+    $blanks = DB::table('product_blanks')->get();
+    // return $blanks;
+
+    return view('welcome', compact( 'blanks' ));
+
     // view will be "mega splash page", no navbar
 });
 
+Route::get('/blanks/{blanks_id}', function ($blanks_id) {
+
+    $blanks = DB::table('product_blanks')->find($blanks_id);
+    
+    dd($blanks);
+
+    return view('welcome', compact( 'blanks' ));
+
+    // view will be "mega splash page", no navbar
+});
+
+
+
+
+
 // [] Create controllers for each next
+// Remember to use php artisan helper function
+// Check how to make a RESOURCES controller*******
 Route::get('/dashboard', function () {
     return view('dashboard');
     // view will be "dashboard (logged in)"
