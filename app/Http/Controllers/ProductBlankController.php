@@ -33,7 +33,9 @@ class ProductBlankController extends Controller
      */
     public function create()
     {
-        //
+        // Form page to capture new product blank entry
+        // NEEDS THIS VIEW
+        return view('blanks.create');
     }
 
     /**
@@ -44,7 +46,20 @@ class ProductBlankController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Array create method?
+        // $blank = ProductBlank::create($request->all());
+        // return response()->json($blank, 201);
+
+        $blank = new ProductBlank;
+
+        $blank->department = $request->dept;
+        $blank->blank_type = $request->type;
+        $blank->blank_name = $request->name;
+        $blank->blank_color = $request->color;
+        
+        $blank->save();
+
+        return response()->json($blank, 201);
     }
 
     /**
@@ -57,10 +72,11 @@ class ProductBlankController extends Controller
     {
         $blank = ProductBlank::find($id);
     
-        dd($blank);
+        // dd($blank);
 
         // return view('welcome', compact( 'blank' ));
-        return response('blank', 200);
+        // return response('blank', 200);
+        return response()->json($blank, 200);
     }
 
     /**
@@ -83,7 +99,9 @@ class ProductBlankController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $id->update($request->all());
+
+        return response()->json($id, 200);
     }
 
     /**
@@ -94,6 +112,8 @@ class ProductBlankController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $id->delete();
+
+        return response()->json(null, 204);
     }
 }
