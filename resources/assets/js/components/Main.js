@@ -5,7 +5,7 @@ import { Container, Row, Col, Table, Card } from 'react-materialize';
 import ReactDataGrid from 'react-data-grid';
 import Navbar from './Navbar/Navbar';
 
-class Main extends Component {
+export default class Main extends Component {
   constructor(props) {
     super(props);
 
@@ -53,7 +53,7 @@ Main.propTypes = {
 
 };
 
-export default Main;
+// export default Main;
 
 if (document.getElementById('root')) {
   ReactDOM.render(<Main />, document.getElementById('root'));
