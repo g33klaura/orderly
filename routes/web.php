@@ -76,7 +76,7 @@ Route::get('/products/blanks', function () {
 //     // Need to make this in controller off model
 // });
 
-Route::resource('blanks', 'ProductBlankController');
+Route::resource('blanks', 'ProductBlankController' , ['parameters' => ['blanks' => 'id']]);
 
 // Route::get('/blanks/{id}', 'ProductBlankController@show');
 
