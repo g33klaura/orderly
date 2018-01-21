@@ -13,7 +13,7 @@ class ProductDetail extends Model
     protected $fillable = ['product_type', 'blank_name', 'blank_color', 'ink_colors', 'product_alias', 'pos_id', 'cost'];
 
     // Assign relation to other tables
-    public function product()
+    public function products()
     {
         return $this->belongsTo('App\Product', 'p_details_id');
     }
