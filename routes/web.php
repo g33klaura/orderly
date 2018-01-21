@@ -19,7 +19,8 @@ Route::get('/', function () {
     // return $blanks;
 
     // return view('welcome', compact( 'blanks' ));
-    return view('welcome');
+    // return view('welcome');
+    return view('home');
 
     // view will be "mega splash page", no navbar
 });
