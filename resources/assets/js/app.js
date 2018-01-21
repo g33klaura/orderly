@@ -14,3 +14,7 @@ require('./bootstrap');
  */
 
 require('./components/Example');
+
+require('./index');  // Contains ReactDOM.render statement
+require('./components/Main');
+require('./components/Navbar/Navbar');
