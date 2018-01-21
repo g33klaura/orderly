@@ -87,7 +87,8 @@ class ProductBlankController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Want this to link to an 'edit' button******
+        return view('blanks.edit');
     }
 
     /**
@@ -97,7 +98,7 @@ class ProductBlankController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, ProductBlank $id)
     {
         $id->update($request->all());
 
@@ -110,7 +111,14 @@ class ProductBlankController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    // public function destroy(ProductBlank $id)
+    // {
+    //     $id->delete();
+
+    //     return response()->json(null, 204);
+    // }
+
+    public function delete(ProductBlank $id)
     {
         $id->delete();
 

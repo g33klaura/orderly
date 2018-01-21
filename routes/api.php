@@ -19,10 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 // =====================================================
-// PRACTICE
-// Route::get('/blanks', function () {
-//     return response(ProductBlank::all(),200);
-// });
+// PRACTICE ~but still using
+
 // Index
 Route::get('/blanks', 'ProductBlankController@index');
 
@@ -37,6 +35,13 @@ Route::post('/blanks', 'ProductBlankController@store');
 //     return response(ProductBlank::find($id), 200);
 // });
 Route::get('/blanks/{id}', 'ProductBlankController@show');
-// ^^Haven't tested this in browser yet
 
+// Edit
+// Like Create, will this just be used to render a view??
+
+// Update
+Route::put('/blanks/{id}','ProductBlankController@update');
+
+// Delete
+Route::delete('/blanks/{id}', 'ProductBlankController@delete');
 // =====================================================
