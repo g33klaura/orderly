@@ -111,17 +111,17 @@ class ProductBlankController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function destroy(ProductBlank $id)
-    // {
-    //     $id->delete();
-
-    //     return response()->json(null, 204);
-    // }
-
-    public function delete(ProductBlank $id)
+    public function destroy(ProductBlank $id)
     {
         $id->delete();
 
         return response()->json(null, 204);
     }
+
+    // public function delete(ProductBlank $id)
+    // {
+    //     $id->delete();
+
+    //     return response()->json(null, 204);
+    // }
 }
