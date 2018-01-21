@@ -20,7 +20,7 @@ Route::get('/', function () {
 
     // return view('welcome', compact( 'blanks' ));
     // return view('welcome');
-    return view('home');
+    return view('layout');
 
     // view will be "mega splash page", no navbar
 });
