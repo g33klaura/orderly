@@ -54,6 +54,8 @@ Route::get('/products', function () {
     // view will be "products" (combined library and add-new)***
 });
 
+Route::resource('product/details', 'ProductDetailController');
+
 // Route for export PDF?
 Route::get('/orders/export', function () {
     return view('orders-export');

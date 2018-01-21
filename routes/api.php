@@ -19,29 +19,39 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 // =====================================================
+// Product Details
+
+Route::resource('/product/details', 'ProductDetailController');
+
+
+
+// =====================================================
 // PRACTICE ~but still using
 
-// Index
-Route::get('/blanks', 'ProductBlankController@index');
+// Product Blanks (should've renamed endpoint to /product/blanks)
+Route::resource('/blanks', 'ProductBlankController' , ['parameters' => ['blanks' => 'id']]);
 
-// Create
-Route::get('/blanks/create', 'ProductBlankController@create');
+// // Index
+// Route::get('/blanks', 'ProductBlankController@index');
 
-// Store
-Route::post('/blanks', 'ProductBlankController@store');
+// // Create
+// Route::get('/blanks/create', 'ProductBlankController@create');
 
-// Show
-// Route::get('/blanks/{blank}', function ($id) {
-//     return response(ProductBlank::find($id), 200);
-// });
-Route::get('/blanks/{id}', 'ProductBlankController@show');
+// // Store
+// Route::post('/blanks', 'ProductBlankController@store');
 
-// Edit
-// Like Create, will this just be used to render a view??
+// // Show
+// // Route::get('/blanks/{blank}', function ($id) {
+// //     return response(ProductBlank::find($id), 200);
+// // });
+// Route::get('/blanks/{id}', 'ProductBlankController@show');
 
-// Update
-Route::put('/blanks/{id}','ProductBlankController@update');
+// // Edit
+// // Like Create, will this just be used to render a view??
 
-// Delete
-Route::delete('/blanks/{id}', 'ProductBlankController@delete');
+// // Update
+// Route::put('/blanks/{id}','ProductBlankController@update');
+
+// // Delete
+// Route::delete('/blanks/{id}', 'ProductBlankController@delete');
 // =====================================================
