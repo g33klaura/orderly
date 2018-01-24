@@ -87,3 +87,6 @@ Route::resource('blanks', 'ProductBlankController' , ['parameters' => ['blanks' 
 // Route::get('/blanks', 'ProductBlankController@index');
 
 // =====================================================
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
