@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Container, Row, Col, Table, Card } from 'react-materialize';
 import ReactDataGrid from 'react-data-grid';
 import Navbar from './Navbar/Navbar';
+import Products from './ProductsLibrary/Products';
 
 export default class Main extends Component {
   constructor(props) {
@@ -44,6 +45,7 @@ export default class Main extends Component {
       <div>
         <h1>Drumroll please...</h1>
         <Navbar />
+        <Products />
       </div>
     );
   }
