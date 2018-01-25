@@ -53,9 +53,10 @@ class Products extends Component {
     return this.state.products.map(product => {
       return (
         <tr key={product.id}>
-          <td>{product.id}</td>
+          <td className='id-column'>{product.id}</td>
           <td>{product.product_name}</td>
           <td>{product.blank_name}</td>
+          <td>{product.blank_color}</td>
         </tr>
       );
     })
@@ -63,27 +64,25 @@ class Products extends Component {
 
   render() {
     return (
-        <Container>
-        <meta name="csrf-token" content="{{ csrf_token() }}"></meta>
-          <Row>
-            <Col s={12}>
-              
-                <Table className='material-table'>
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Blank</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                      { this.renderProducts() }
-                  </tbody>
-                </Table>
-              
-            </Col>
-          </Row>
-        </Container>
+      <Row>
+        <Col s={12}>
+          
+          <Table className='material-table'>
+            <thead>
+              <tr>
+                <th className='id-column'>ID</th>
+                <th>Name</th>
+                <th>Blank</th>
+                <th>Blank Color</th>
+              </tr>
+            </thead>
+            <tbody>
+                { this.renderProducts() }
+            </tbody>
+          </Table>
+          
+        </Col>
+      </Row>
     );
   }
 }
