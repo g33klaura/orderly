@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
+import { Navbar, NavItem } from 'react-materialize';
+// import './ImportedLogo.svg';
+import Img from '../../../img/img.svg';
 
-class Navbar extends Component {
+const Logo = <img src={Img}/>
+
+class Nav extends Component {
   render() {
-    return (
-      <div>
-        <h4>I will be a navbar</h4>
-      </div>
+    return ( 
+      <Navbar brand={Logo} right>
+        <NavItem className='active' href='#'>Home</NavItem>
+        <NavItem href='#'>Orders</NavItem>
+        <NavItem href='#'>Library</NavItem>
+        <NavItem href='#'>Log Out</NavItem>
+      </Navbar>
     );
   }
 }
 
-export default Navbar;
+export default Nav;

@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Table, Card } from 'react-materialize';
 import ReactDataGrid from 'react-data-grid';
-import Navbar from './Navbar/Navbar';
+import Nav from './Navbar/Navbar';
 import Products from './ProductsLibrary/Products';
-import '../../css/Main.css';
+import './Main.css';
 
 export default class Main extends Component {
   constructor(props) {
@@ -13,50 +13,51 @@ export default class Main extends Component {
 
   }
 
-  componentWillMount() {
+  // componentWillMount() {
 
-  }
+  // }
 
-  componentDidMount() {
+  // componentDidMount() {
 
-  }
+  // }
 
-  componentWillReceiveProps(nextProps) {
+  // componentWillReceiveProps(nextProps) {
 
-  }
+  // }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  // shouldComponentUpdate(nextProps, nextState) {
 
-  }
+  // }
 
-  componentWillUpdate(nextProps, nextState) {
+  // componentWillUpdate(nextProps, nextState) {
 
-  }
+  // }
 
-  componentDidUpdate(prevProps, prevState) {
+  // componentDidUpdate(prevProps, prevState) {
 
-  }
+  // }
 
-  componentWillUnmount() {
+  // componentWillUnmount() {
 
-  }
+  // }
 
   render() {
     return (
-      <Container>
-      
-        <h1>Drumroll please...</h1>
-        <Navbar />
-        <Products />
-      
-      </Container>
+      <main>
+        {/*<Nav />*/}
+        <Nav />
+        <Container>
+          <h1>Drumroll please...</h1>
+          <Products />
+        </Container>
+      </main>
     );
   }
 }
 
-Main.propTypes = {
+// Main.propTypes = {
 
-};
+// };
 
 // export default Main;
 
