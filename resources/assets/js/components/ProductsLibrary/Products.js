@@ -11,13 +11,15 @@ class Products extends Component {
     }
   }
 
-  componentWillMount() {
+  // componentWillMount() {
 
-  }
+  // }
 
   componentDidMount() {
     /* fetch API in action */
-    fetch('/api/products/')
+    fetch('/api/products/', {
+      method: 'GET'
+    })
       .then(response => {
         return response.json();
       })
@@ -27,25 +29,25 @@ class Products extends Component {
       });
   }
 
-  componentWillReceiveProps(nextProps) {
+  // componentWillReceiveProps(nextProps) {
 
-  }
+  // }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  // shouldComponentUpdate(nextProps, nextState) {
 
-  }
+  // }
 
-  componentWillUpdate(nextProps, nextState) {
+  // componentWillUpdate(nextProps, nextState) {
 
-  }
+  // }
 
-  componentDidUpdate(prevProps, prevState) {
+  // componentDidUpdate(prevProps, prevState) {
 
-  }
+  // }
 
-  componentWillUnmount() {
+  // componentWillUnmount() {
 
-  }
+  // }
 
   renderProducts() {
     return this.state.products.map(product => {
@@ -84,8 +86,8 @@ class Products extends Component {
   }
 }
 
-Products.propTypes = {
+// Products.propTypes = {
 
-};
+// };
 
 export default Products;
