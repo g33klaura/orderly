@@ -13,7 +13,7 @@
   <body>
 
     {{--  Needs empty div for React to render in  --}}
-    <div class="container" id="root"></div>
+    <div id="root"></div>
 
     <!-- Script for React -->
     <script src="{{mix('js/app.js')}}"></script>
