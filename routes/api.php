@@ -19,9 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 // =====================================================
-// Product Details
+// Product Library of all products in db
 
-Route::resource('/product/details', 'ProductDetailController');
+Route::get('/products', 'ProductsController@index');
 
 
 
