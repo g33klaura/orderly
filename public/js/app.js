@@ -13168,7 +13168,7 @@ var Products = function (_Component) {
           { key: product.id },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'td',
-            null,
+            { className: 'id-column' },
             product.id
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -13180,6 +13180,11 @@ var Products = function (_Component) {
             'td',
             null,
             product.blank_name
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'td',
+            null,
+            product.blank_color
           )
         );
       });
@@ -13188,46 +13193,46 @@ var Products = function (_Component) {
     key: 'render',
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Container"],
+        __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Row"],
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { name: 'csrf-token', content: '{{ csrf_token() }}' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Row"],
-          null,
+          __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Col"],
+          { s: 12 },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Col"],
-            { s: 12 },
+            __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Table"],
+            { className: 'material-table' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Table"],
-              { className: 'material-table' },
+              'thead',
+              null,
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'thead',
+                'tr',
                 null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  'tr',
+                  'th',
+                  { className: 'id-column' },
+                  'ID'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'th',
                   null,
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'th',
-                    null,
-                    'ID'
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'th',
-                    null,
-                    'Name'
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'th',
-                    null,
-                    'Blank'
-                  )
+                  'Name'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'th',
+                  null,
+                  'Blank'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'th',
+                  null,
+                  'Blank Color'
                 )
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'tbody',
-                null,
-                this.renderProducts()
               )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'tbody',
+              null,
+              this.renderProducts()
             )
           )
         )
@@ -90601,7 +90606,7 @@ var Main = function (_Component) {
     key: 'render',
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
+        __WEBPACK_IMPORTED_MODULE_3_react_materialize__["Container"],
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h1',
@@ -90668,7 +90673,7 @@ exports = module.exports = __webpack_require__(113)(false);
 
 
 // module
-exports.push([module.i, "tbody {\n  display:block;\n  height:150px;\n  overflow:auto;\n}\n\nthead, tbody tr {\n  display:table;\n  width:100%;\n  table-layout:fixed;\n}\n\nthead {\n  width: calc( 100% - 1em )\n}\n\ntable {\n  width:100%;\n}", ""]);
+exports.push([module.i, "tbody {\n  display:block;\n  height:400px;\n  overflow:auto;\n  background-color: rgba(255, 255, 255, 0.6);\n}\n\nthead, tbody tr {\n  display:table;\n  width:100%;\n  table-layout:fixed;\n}\n\nthead {\n  width: calc( 100% - 1em )\n}\n\ntable {\n  width:100%;\n}\n\n.id-column {\n  width: 60px;\n}", ""]);
 
 // exports
 
@@ -90809,7 +90814,7 @@ exports = module.exports = __webpack_require__(113)(false);
 
 
 // module
-exports.push([module.i, "html {\n\tbackground: url(" + escape(__webpack_require__(287)) + ") no-repeat center center fixed;\n\t\t-webkit-background-size: cover;\n  \t-moz-background-size: cover;\n  \t-o-background-size: cover;\n  \tbackground-size: cover;\n\tfont-family: 'Barlow Semi Condensed', sans-serif;\n}\n\nh1 {\n\tfont-family: 'Dosis', sans-serif;\n}\n\n\n\n/* font-family: 'Dosis', sans-serif; */\n\n/* font-family: 'Barlow Semi Condensed', sans-serif; */", ""]);
+exports.push([module.i, "html {\n\tbackground: url(" + escape(__webpack_require__(296)) + ") no-repeat center center fixed;\n\t\t-webkit-background-size: cover;\n  \t-moz-background-size: cover;\n  \t-o-background-size: cover;\n  \tbackground-size: cover;\n\tfont-family: 'Barlow Semi Condensed', sans-serif;\n}\n\nh1 {\n\tfont-family: 'Dosis', sans-serif;\n}\n\n\n\n/* font-family: 'Dosis', sans-serif; */\n\n/* font-family: 'Barlow Semi Condensed', sans-serif; */", ""]);
 
 // exports
 
@@ -90837,16 +90842,24 @@ module.exports = function escape(url) {
 
 
 /***/ }),
-/* 287 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/bkgd_sz1.jpeg?8450ff21db294a8416a6d7a01a0a6f54";
-
-/***/ }),
+/* 287 */,
 /* 288 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/bkgd_sz2.jpg?039fcb67700a0009df21e3c79c0d5cdc";
 
 /***/ })
 /******/ ]);
