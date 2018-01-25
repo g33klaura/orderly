@@ -13041,8 +13041,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_materialize__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_materialize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_img_svg__ = __webpack_require__(298);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_img_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__img_img_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13053,10 +13053,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-// import './ImportedLogo.svg';
 
 
-var Logo = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __WEBPACK_IMPORTED_MODULE_2__img_img_svg___default.a });
+var Logo = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg__["OrderlyLogo"] });
 
 var Nav = function (_Component) {
   _inherits(Nav, _Component);
@@ -13114,7 +13113,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_materialize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Products_css__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Products_css__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Products_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Products_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -13402,7 +13401,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(283);
+var	fixUrls = __webpack_require__(284);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -13719,7 +13718,7 @@ function updateLink (link, options, obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(116);
-module.exports = __webpack_require__(288);
+module.exports = __webpack_require__(289);
 
 
 /***/ }),
@@ -90577,7 +90576,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_data_grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_data_grid__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Navbar_Navbar__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ProductsLibrary_Products__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Main_css__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Main_css__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Main_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__Main_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -90670,12 +90669,18 @@ if (document.getElementById('root')) {
 
 /***/ }),
 /* 281 */
+/***/ (function(module, exports) {
+
+module.exports = "/fonts/OrderlyLogo.svg?240e1b05a447f345b73cee1758d936c5";
+
+/***/ }),
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(282);
+var content = __webpack_require__(283);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -90700,7 +90705,7 @@ if(false) {
 }
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(113)(false);
@@ -90714,7 +90719,7 @@ exports.push([module.i, "tbody {\n  display:block;\n  height:400px;\n  overflow:
 
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, exports) {
 
 
@@ -90809,13 +90814,13 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 284 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(285);
+var content = __webpack_require__(286);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -90840,22 +90845,22 @@ if(false) {
 }
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(286);
+var escape = __webpack_require__(287);
 exports = module.exports = __webpack_require__(113)(false);
 // imports
 
 
 // module
-exports.push([module.i, "html {\n\tbackground: url(" + escape(__webpack_require__(287)) + ") no-repeat center center fixed;\n\t\t-webkit-background-size: cover;\n  \t-moz-background-size: cover;\n  \t-o-background-size: cover;\n  \tbackground-size: cover;\n\tfont-family: 'Barlow Semi Condensed', sans-serif;\n}\n\nh1 {\n\tfont-family: 'Dosis', sans-serif;\n}\n\n\n\n/* font-family: 'Dosis', sans-serif; */\n\n/* font-family: 'Barlow Semi Condensed', sans-serif; */", ""]);
+exports.push([module.i, "html {\n\tbackground: url(" + escape(__webpack_require__(288)) + ") no-repeat center center fixed;\n\t\t-webkit-background-size: cover;\n  \t-moz-background-size: cover;\n  \t-o-background-size: cover;\n  \tbackground-size: cover;\n\tfont-family: 'Barlow Semi Condensed', sans-serif;\n}\n\nh1 {\n\tfont-family: 'Dosis', sans-serif;\n}\n\n\n\n/* font-family: 'Dosis', sans-serif; */\n\n/* font-family: 'Barlow Semi Condensed', sans-serif; */", ""]);
 
 // exports
 
 
 /***/ }),
-/* 286 */
+/* 287 */
 /***/ (function(module, exports) {
 
 module.exports = function escape(url) {
@@ -90877,31 +90882,16 @@ module.exports = function escape(url) {
 
 
 /***/ }),
-/* 287 */
+/* 288 */
 /***/ (function(module, exports) {
 
 module.exports = "/images/bkgd_sz2.jpg?039fcb67700a0009df21e3c79c0d5cdc";
 
 /***/ }),
-/* 288 */
+/* 289 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 289 */,
-/* 290 */,
-/* 291 */,
-/* 292 */,
-/* 293 */,
-/* 294 */,
-/* 295 */,
-/* 296 */,
-/* 297 */,
-/* 298 */
-/***/ (function(module, exports) {
-
-module.exports = "/fonts/img.svg?8b489ee9280fda42f8a68fb19c170bce";
 
 /***/ })
 /******/ ]);
