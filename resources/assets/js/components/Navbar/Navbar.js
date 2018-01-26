@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, NavItem } from 'react-materialize';
+import { Navbar, NavItem, SideNav, SideNavItem } from 'react-materialize';
 import  OrderlyLogo  from '../../../img/OrderlyLogo.svg';
 import styles from './Navbar.css';
 
