@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Navbar, NavItem } from 'react-materialize';
-import { OrderlyLogo } from '../../../img/OrderlyLogo.svg';
+import  OrderlyLogo  from '../../../img/OrderlyLogo.svg';
+import styles from './Navbar.css';
 
-const Logo = <img src={ OrderlyLogo }/>
+const Logo = <img id='nav-logo' src={ OrderlyLogo }/>
 
 class Nav extends Component {
   render() {

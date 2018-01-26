@@ -13043,6 +13043,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_materialize__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg__ = __webpack_require__(281);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Navbar_css__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Navbar_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Navbar_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13055,7 +13057,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var Logo = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg__["OrderlyLogo"] });
+
+var Logo = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'nav-logo', src: __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg___default.a });
 
 var Nav = function (_Component) {
   _inherits(Nav, _Component);
@@ -90671,7 +90674,7 @@ if (document.getElementById('root')) {
 /* 281 */
 /***/ (function(module, exports) {
 
-module.exports = "/fonts/OrderlyLogo.svg?240e1b05a447f345b73cee1758d936c5";
+module.exports = "/images/OrderlyLogo.svg?ac75c80fa8cdeaf02d8447635b9cc0db";
 
 /***/ }),
 /* 282 */
@@ -90892,6 +90895,57 @@ module.exports = "/images/bkgd_sz2.jpg?039fcb67700a0009df21e3c79c0d5cdc";
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(297);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(114)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./Navbar.css", function() {
+			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./Navbar.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 297 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(113)(false);
+// imports
+
+
+// module
+exports.push([module.i, "#nav-logo {\n  width: 150px;\n}", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);
