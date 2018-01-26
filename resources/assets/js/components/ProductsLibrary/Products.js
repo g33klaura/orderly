@@ -4,18 +4,14 @@ import { Container, Row, Col, Table, Card } from 'react-materialize';
 import styles from './Products.css';
 
 class Products extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       products: [],
     }
   }
 
-  // componentWillMount() {
-
-  // }
-
-  componentDidMount() {
+  componentWillMount() {
     /* fetch API in action */
     fetch('/api/products/', {
       method: 'GET'
@@ -28,26 +24,6 @@ class Products extends Component {
         this.setState({ products });
       });
   }
-
-  // componentWillReceiveProps(nextProps) {
-
-  // }
-
-  // shouldComponentUpdate(nextProps, nextState) {
-
-  // }
-
-  // componentWillUpdate(nextProps, nextState) {
-
-  // }
-
-  // componentDidUpdate(prevProps, prevState) {
-
-  // }
-
-  // componentWillUnmount() {
-
-  // }
 
   renderProducts() {
     return this.state.products.map(product => {
