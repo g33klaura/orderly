@@ -46,7 +46,7 @@ export default class Main extends Component {
       <main>
         <Nav />
         <Container>
-          <h1>Drumroll please...</h1>
+          <h1>Product Library</h1>
           <Products />
         </Container>
       </main>
