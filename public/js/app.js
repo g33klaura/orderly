@@ -13482,8 +13482,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_materialize__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_materialize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogobw_svg__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogobw_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogobw_svg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Navbar_css__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Navbar_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Navbar_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -13496,10 +13496,11 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+// import OrderlyLogo from '../../../img/OrderlyLogo.svg';
 
 
 
-var Logo = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'nav-logo', src: __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogo_svg___default.a });
+var Logo = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'nav-logo', src: __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogobw_svg___default.a });
 
 var Nav = function (_Component) {
   _inherits(Nav, _Component);
@@ -90649,7 +90650,7 @@ if (document.getElementById('root')) {
 /* 281 */
 /***/ (function(module, exports) {
 
-module.exports = "/images/OrderlyLogo.svg?ac75c80fa8cdeaf02d8447635b9cc0db";
+module.exports = "/images/OrderlyLogobw.svg?27f07c420b8ca703774f5a9a46391b88";
 
 /***/ }),
 /* 282 */
@@ -90691,7 +90692,7 @@ exports = module.exports = __webpack_require__(67)(false);
 
 
 // module
-exports.push([module.i, ".nav-wrapper {\n  /* background-color: #20D48B; */\n  background-color: #092D36;\n}\n\n.brand-logo {\n  display: inline-block;\n  height: 100%;\n}\n\n.brand-logo>img {\n  vertical-align: middle;\n}\n\n#nav-logo {\n  width: 150px;\n}", ""]);
+exports.push([module.i, ".nav-wrapper {\n  background-color: #20D48B;\n  /* background-color: #092D36; */\n}\n\n/* Sets spacing for navbar menu */\n.hide-on-med-and-down {\n  margin-right: 20px;\n}\n\n.brand-logo {\n  display: inline-block;\n  height: 100%;\n}\n\n.brand-logo>img {\n  vertical-align: middle;\n}\n\n#nav-logo {\n  width: 150px;\n  margin-left: 50px;\n  margin-bottom: 4px;\n}", ""]);
 
 // exports
 
