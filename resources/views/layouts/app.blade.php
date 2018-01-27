@@ -55,7 +55,7 @@
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                    document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
 
@@ -75,6 +75,10 @@
     </div>
 
     <!-- Scripts -->
+
+    {{--  References empty footer that global variables will pass to, allowing React Components to access them  --}}
+    @include ('footer')
+    {{--  Mix script for React  --}}
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
