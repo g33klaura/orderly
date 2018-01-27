@@ -1,6 +1,11 @@
 .nav-wrapper {
-  /* background-color: #20D48B; */
-  background-color: #092D36;
+  background-color: #20D48B;
+  /* background-color: #092D36; */
+}
+
+/* Sets spacing for navbar menu */
+.hide-on-med-and-down {
+  margin-right: 20px;
 }
 
 .brand-logo {
@@ -14,4 +19,6 @@
 
 #nav-logo {
   width: 150px;
+  margin-left: 50px;
+  margin-bottom: 4px;
 }
