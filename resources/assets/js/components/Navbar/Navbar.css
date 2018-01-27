@@ -1,3 +1,17 @@
+.nav-wrapper {
+  /* background-color: #20D48B; */
+  background-color: #092D36;
+}
+
+.brand-logo {
+  display: inline-block;
+  height: 100%;
+}
+
+.brand-logo>img {
+  vertical-align: middle;
+}
+
 #nav-logo {
   width: 150px;
 }

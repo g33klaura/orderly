@@ -90691,7 +90691,7 @@ exports = module.exports = __webpack_require__(67)(false);
 
 
 // module
-exports.push([module.i, "#nav-logo {\n  width: 150px;\n}", ""]);
+exports.push([module.i, ".nav-wrapper {\n  /* background-color: #20D48B; */\n  background-color: #092D36;\n}\n\n.brand-logo {\n  display: inline-block;\n  height: 100%;\n}\n\n.brand-logo>img {\n  vertical-align: middle;\n}\n\n#nav-logo {\n  width: 150px;\n}", ""]);
 
 // exports
 
