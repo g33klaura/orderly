@@ -13535,7 +13535,8 @@ var Nav = function (_Component) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_1_react_materialize__["NavItem"],
           { href: '#' },
-          'Log Out'
+          'Log Out, ',
+          window.name
         )
       );
     }

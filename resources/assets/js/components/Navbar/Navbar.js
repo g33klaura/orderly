@@ -13,7 +13,7 @@ class Nav extends Component {
         <NavItem className='active' href='#'>Home</NavItem>
         <NavItem href='#'>Orders</NavItem>
         <NavItem href='#'>Library</NavItem>
-        <NavItem href='#'>Log Out</NavItem>
+        <NavItem href='#'>Log Out, { window.name }</NavItem>
       </Navbar>
     );
   }
