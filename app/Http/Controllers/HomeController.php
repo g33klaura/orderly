@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use JavaScript;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        JavaScript::put([
+            // Set logged in user to global variable so React can access it
+            'name' => Auth::user()->name
+        ]);
+        
         return view('home');
     }
 }
