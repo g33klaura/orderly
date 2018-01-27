@@ -12,6 +12,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{--  Link to my own stylesheet to override Bootstrap defaults like background-color  --}}
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -28,8 +30,9 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" href="{{ url('/') }}" id="nav-logo">
+                        <img src="{{ (asset('/images/OrderlyLogobw.svg')) }}" />
+                        {{--  {{ config('app.name', 'Laravel') }}  --}}
                     </a>
                 </div>
 
