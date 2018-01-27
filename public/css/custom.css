@@ -1,0 +1,35 @@
+/* Styles to override Bootstrap defaults on auth screens */
+
+body {
+  background-color: transparent !important;
+  /* background: transparent !important; */
+}
+
+.navbar {
+  background-color: #20D48B;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  /* color: white !important; */
+}
+
+.nav.navbar-nav.navbar-right li a {
+  color: white;
+}
+
+.nav.navbar-nav.navbar-right li a:hover {
+  color: aqua;
+}
+
+.navbar-brand {
+  display: inline-block;
+  height: 100%;
+}
+
+.navbar-brand>a {
+  vertical-align: middle;
+}
+
+#nav-logo {
+  width: 150px;
+  margin-left: 50px;
+  margin-bottom: 4px;
+}
