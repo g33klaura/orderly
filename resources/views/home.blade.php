@@ -15,6 +15,10 @@
                     @endif
 
                     You are logged in!
+
+                    {{--  <button type="button" class="btn btn-outline-info">Proceed</button>  --}}
+                    <br/>
+                    <a class="waves-effect waves-light btn" href=" {{ route('loggedIn') }} ">Click to Begin</a>
                 </div>
             </div>
         </div>
