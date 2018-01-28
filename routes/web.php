@@ -20,7 +20,9 @@ Route::get('/', function () {
 
     // return view('welcome', compact( 'blanks' ));
     // return view('welcome');
-    return view('layout');
+
+    // return view('layout');
+    return view('home');
 
     // view will be "mega splash page", no navbar
 });
@@ -90,3 +92,8 @@ Route::resource('blanks', 'ProductBlankController' , ['parameters' => ['blanks' 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Hopefully naming a route to direct to when user logs in...
+Route::get('/main', function() {
+    return view('layout');
+})->name('loggedIn');
