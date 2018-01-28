@@ -2,21 +2,31 @@
 
 body {
   background-color: transparent !important;
-  /* background: transparent !important; */
 }
 
 .navbar {
   background-color: #20D48B;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  /* color: white !important; */
+  height: 64px;
+  border-bottom: 0;
+  box-shadow: 1px #B5B5B6;
+}
+
+.navbar-nav {
+  margin: 7px -15px;
 }
 
 .nav.navbar-nav.navbar-right li a {
   color: white;
 }
 
+/*-- change navbar dropdown color --*/
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+  color: #092D36;
+}
+
 .nav.navbar-nav.navbar-right li a:hover {
-  color: aqua;
+  color: #773FFF;
 }
 
 .navbar-brand {
@@ -24,12 +34,12 @@ body {
   height: 100%;
 }
 
-.navbar-brand>a {
+.navbar-brand>img {
   vertical-align: middle;
 }
 
-#nav-logo {
+#bs-nav-logo {
   width: 150px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   margin-bottom: 4px;
 }
