@@ -13502,13 +13502,26 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var Logo = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'nav-logo', src: __WEBPACK_IMPORTED_MODULE_2__img_OrderlyLogobw_svg___default.a });
 
+// const Logout = React.createClass({
+//   getDefaultProps: function() {
+//     return {
+//       route: '/home'
+//     };
+//   }
+// })
+
 var Nav = function (_Component) {
   _inherits(Nav, _Component);
 
-  function Nav() {
+  function Nav(props) {
     _classCallCheck(this, Nav);
 
-    return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
+
+    _this.state = {
+      logout: '/login'
+    };
+    return _this;
   }
 
   _createClass(Nav, [{
@@ -13534,7 +13547,7 @@ var Nav = function (_Component) {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_1_react_materialize__["NavItem"],
-          { href: '#' },
+          { onClick: this.state.logout, href: this.state.logout },
           'Log Out, ',
           window.name
         )
