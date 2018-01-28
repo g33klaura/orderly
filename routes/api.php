@@ -18,6 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Trying to set logout route for React Nav component
+// Route::post('/logout', function(){
+//     return view('home');
+// });
+
 // =====================================================
 // Product Library of all products in db
 
