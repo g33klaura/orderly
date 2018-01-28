@@ -30,8 +30,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}" id="nav-logo">
-                        <img src="{{ (asset('/images/OrderlyLogobw.svg')) }}" />
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="{{ (asset('/images/OrderlyLogobw.svg')) }}" id="bs-nav-logo" />
                         {{--  {{ config('app.name', 'Laravel') }}  --}}
                     </a>
                 </div>
