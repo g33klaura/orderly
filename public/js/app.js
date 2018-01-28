@@ -90910,7 +90910,7 @@ module.exports = function escape(url) {
 /* 290 */
 /***/ (function(module, exports) {
 
-module.exports = "/images/bkgd_sz2.jpg?039fcb67700a0009df21e3c79c0d5cdc";
+module.exports = "/images/bkgd_sz4.jpg?bca8cab69e3912838ca77eca1d830541";
 
 /***/ }),
 /* 291 */
