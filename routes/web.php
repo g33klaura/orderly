@@ -97,3 +97,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/main', function() {
     return view('layout');
 })->name('loggedIn');
+
+
+Route::get('/example', function() {
+    return view('welcome');
+});
