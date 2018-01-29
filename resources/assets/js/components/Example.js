@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Container, Row, Col, Table, Card } from 'react-materialize';
 import ReactDataGrid from 'react-data-grid';
+import Export from './ExportPDF';
 
 export default class Example extends Component {
     constructor() {
@@ -51,6 +52,7 @@ export default class Example extends Component {
             <Container>
                 <Row>
                     <Col s={12}>
+                    
                         <h1>I'm in Materialize!</h1>
                     </Col>
                 </Row>
@@ -60,7 +62,7 @@ export default class Example extends Component {
                             { this.renderBlanks() }
                         </ul>*/}
                         <div className='card material-table'>
-                        <Card> 
+                        {/*<Card>*/}
                             <Table>
                                 <thead>
                                     <tr>
@@ -73,7 +75,7 @@ export default class Example extends Component {
                                     { this.renderBlanks() }
                                 </tbody>
                             </Table>
-                        </Card>
+                        {/*</Card>*/}
                         </div>
                     </Col>
                 </Row>

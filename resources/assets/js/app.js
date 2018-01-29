@@ -17,5 +17,5 @@ require('./components/Example');
 
 require('./components/Main'); // Contains ReactDOM.render statement
 require('./components/Navbar/Navbar');
-
 require('./components/ProductsLibrary/Products');
+require('./components/ExportPDF');
