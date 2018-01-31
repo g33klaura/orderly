@@ -1,4 +1,5 @@
 <?php
+$dbUrl = parse_url(env("mysql://my7v3ziro44uai65:e881gwl0oyl8vt4x@y0nkiij6humroewt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/l65qlt7fy699gke5"));
 
 return [
 
@@ -39,13 +40,28 @@ return [
             'prefix' => '',
         ],
 
+        // 'mysql' => [
+        //     'driver' => 'mysql',
+        //     'host' => env('DB_HOST', '127.0.0.1'),
+        //     'port' => env('DB_PORT', '3306'),
+        //     'database' => env('DB_DATABASE', 'forge'),
+        //     'username' => env('DB_USERNAME', 'forge'),
+        //     'password' => env('DB_PASSWORD', ''),
+        //     'unix_socket' => env('DB_SOCKET', ''),
+        //     'charset' => 'utf8mb4',
+        //     'collation' => 'utf8mb4_unicode_ci',
+        //     'prefix' => '',
+        //     'strict' => true,
+        //     'engine' => null,
+        // ],
+
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', 'y0nkiij6humroewt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'l65qlt7fy699gke5'),
+            'username' => env('DB_USERNAME', 'my7v3ziro44uai65'),
+            'password' => env('DB_PASSWORD', 'e881gwl0oyl8vt4x'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -53,6 +69,22 @@ return [
             'strict' => true,
             'engine' => null,
         ],
+
+        // 'mysql' => [
+        //     'driver' => 'mysql’,
+        //     'host' => isset($dbUrl["host"]) ? $dbUrl["y0nkiij6humroewt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com"] : env("DB_HOST"),
+        //     'port' => isset($dbUrl["port"]) ? $dbUrl["3306"] : env("DB_PORT"),
+        //     'database' => isset($dbUrl["path"]) ? ltrim($dbUrl["l65qlt7fy699gke5"], '/') : env("DB_DATABASE"),
+        //     'username' => isset($dbUrl["user"]) ? $dbUrl["my7v3ziro44uai65"] : env("DB_USERNAME"),
+        //     'password' => isset($dbUrl["pass"]) ? $dbUrl["e881gwl0oyl8vt4x"] : env("DB_PASSWORD"),
+        //     'charset' => 'utf8mb4’,
+        //     'collation' => 'utf8mb4_unicode_ci’,
+        //     'prefix' => '’,
+        //     'strict' => true,
+        //     'engine' => null,
+        // ],
+
+
 
         'pgsql' => [
             'driver' => 'pgsql',
