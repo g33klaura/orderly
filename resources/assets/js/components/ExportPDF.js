@@ -1,15 +1,21 @@
-import React, { Component } from 'react';
+import React, {Component, PropTypes} from 'react';
+import ReactDOM from 'react-dom';
 import html2canvas from 'html2canvas';
-import jspdf from 'jspdf';
-import Products from './ProductsLibrary/Products';
+import jsPDF from 'jspdf';
+// import Products from './ProductsLibrary/Products';
 
 export default class Export extends Component {
   constructor(props) {
     super(props);
   }
 
+
+
   printDocument() {
-    const input = document.getElementById('divToPrint');
+    const input = (document.getElementById('divToPrint'), {
+      allowTaint:true,
+      useCORS:true
+    });
     html2canvas(input)
       .then((canvas) => {
         const imgData = canvas.toDataURL('image/png');
@@ -22,23 +28,18 @@ export default class Export extends Component {
   }
 
   render() {
-    return (<div>
-      <div className="mb5">
-        <button onClick={this.printDocument}>Print</button>
-      </div>
-      <div id="divToPrint" className="mt4" {...css({
-        backgroundColor: '#f5f5f5',
-        width: '210mm',
-        minHeight: '297mm',
-        marginLeft: 'auto',
-        marginRight: 'auto'
-      })}>
-        <div>Note: Here the dimensions of div are same as A4</div> 
-        <div>You Can add any component here</div>
-        <div>
-          <Products />
+    return (
+      <div>
+        <div className="mb5">
+          <button onClick={this.printDocument}>Print</button>
+    </div>
+        <div id="divToPrint" className="mt4">
+          <div>Note: Here the dimensions of div are same as A4</div> 
+          <div>You Can add any component here</div>
+          <div>
+          </div>
         </div>
-      </div>
-    </div>);
+        </div>
+      )  
   }
 }

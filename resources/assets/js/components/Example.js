@@ -49,20 +49,21 @@ export default class Example extends Component {
     
     render() {
         return (
+            <div>
+            <Export />
+            
             <Container>
                 <Row>
                     <Col s={12}>
-                    
+                        
                         <h1>I'm in Materialize!</h1>
                     </Col>
                 </Row>
                 <Row>
                     <Col s={12}>
-                        {/*<ul>
-                            { this.renderBlanks() }
-                        </ul>*/}
+                        
                         <div className='card material-table'>
-                        {/*<Card>*/}
+                            
                             <Table>
                                 <thead>
                                     <tr>
@@ -75,11 +76,12 @@ export default class Example extends Component {
                                     { this.renderBlanks() }
                                 </tbody>
                             </Table>
-                        {/*</Card>*/}
+                        
                         </div>
                     </Col>
                 </Row>
             </Container>
+            </div>
         );
     }
 }

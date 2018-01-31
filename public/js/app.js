@@ -16751,13 +16751,12 @@ module.exports = __webpack_require__(325);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_html2canvas__ = __webpack_require__(327);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_html2canvas___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_html2canvas__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jspdf__ = __webpack_require__(357);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jspdf___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jspdf__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ProductsLibrary_Products__ = __webpack_require__(87);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_html2canvas__ = __webpack_require__(327);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_html2canvas___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_html2canvas__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jspdf__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jspdf___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jspdf__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -16770,6 +16769,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+// import Products from './ProductsLibrary/Products';
 
 var Export = function (_Component) {
   _inherits(Export, _Component);
@@ -16783,10 +16783,13 @@ var Export = function (_Component) {
   _createClass(Export, [{
     key: 'printDocument',
     value: function printDocument() {
-      var input = document.getElementById('divToPrint');
-      __WEBPACK_IMPORTED_MODULE_1_html2canvas___default()(input).then(function (canvas) {
+      var input = (document.getElementById('divToPrint'), {
+        allowTaint: true,
+        useCORS: true
+      });
+      __WEBPACK_IMPORTED_MODULE_2_html2canvas___default()(input).then(function (canvas) {
         var imgData = canvas.toDataURL('image/png');
-        var pdf = new jsPDF();
+        var pdf = new __WEBPACK_IMPORTED_MODULE_3_jspdf___default.a();
         pdf.addImage(imgData, 'JPEG', 0, 0);
         // pdf.output('dataurlnewwindow');
         pdf.save("download.pdf");
@@ -16809,13 +16812,7 @@ var Export = function (_Component) {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          _extends({ id: 'divToPrint', className: 'mt4' }, css({
-            backgroundColor: '#f5f5f5',
-            width: '210mm',
-            minHeight: '297mm',
-            marginLeft: 'auto',
-            marginRight: 'auto'
-          })),
+          { id: 'divToPrint', className: 'mt4' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             null,
@@ -16826,11 +16823,7 @@ var Export = function (_Component) {
             null,
             'You Can add any component here'
           ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ProductsLibrary_Products__["default"], null)
-          )
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', null)
         )
       );
     }
@@ -49242,6 +49235,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_data_grid__ = __webpack_require__(140);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_data_grid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_data_grid__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ExportPDF__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ExportPDF___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__ExportPDF__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -49325,60 +49319,65 @@ var Example = function (_Component) {
         key: 'render',
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Container"],
+                'div',
                 null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__ExportPDF__["default"], null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Row"],
+                    __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Container"],
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Col"],
-                        { s: 12 },
+                        __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Row"],
+                        null,
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'h1',
-                            null,
-                            'I\'m in Materialize!'
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Row"],
-                    null,
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Col"],
-                        { s: 12 },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'card material-table' },
+                            __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Col"],
+                            { s: 12 },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Table"],
+                                'h1',
                                 null,
+                                'I\'m in Materialize!'
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Row"],
+                        null,
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Col"],
+                            { s: 12 },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'card material-table' },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'thead',
+                                    __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Table"],
                                     null,
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'tr',
+                                        'thead',
                                         null,
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'th',
+                                            'tr',
                                             null,
-                                            'Type'
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'th',
-                                            null,
-                                            'Name'
-                                        ),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'th',
-                                            null,
-                                            'Color'
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'th',
+                                                null,
+                                                'Type'
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'th',
+                                                null,
+                                                'Name'
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'th',
+                                                null,
+                                                'Color'
+                                            )
                                         )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'tbody',
+                                        null,
+                                        this.renderBlanks()
                                     )
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'tbody',
-                                    null,
-                                    this.renderBlanks()
                                 )
                             )
                         )
