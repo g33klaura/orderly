@@ -9,7 +9,10 @@
 <!-- Use extension to make TOC -->
 <!-- ## Contents -->
 
-## Inspiration/ Concept/ Motivation
+## Inspiration/ Motivation
+
+My background is in apparel retail. Previously as a buyer and product designer in a local retail company, I was in charge of creating spec sheets and placing orders for custom apparel for the store to sell to customers. Those initial and re-orders have many specific details to include, so the screenprinters in charge of making the garments know exactly how to produce the apparel ordered.
+My application will take away the stress of having to re-type all those specific details (from ink colors, to size labels, etc.), and leave less room for errors by copying/pasting specs from previous orders manually.
 
 ## Technologies Used
 
@@ -50,19 +53,21 @@
 <img src="./readme-assets/heroku.svg" alt="heroku-logo" height="50" >
 </div>
 
+## Key Features In Process
 
+* Database to save user libraries of products and orders
+* Drag-and-drop functionality to build orders from products library
+* Export completed orders to PDF
 
-## Key Features
+<!-- ### Application Process
 
-* Thing 1
-
-### Application Process
-
-1. Step 1
+1. Step 1 -->
 
 ### Screenshots
 
-###### Image caption
+###### Baby steps to what will someday be an amazing, helpful, and functional full-stack application
+
+![Phase 0.3 of App](./readme-assets/orderly_phase0.3.gif)
 
 <!-- ![Alt Text](url) -->
 
