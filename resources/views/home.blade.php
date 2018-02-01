@@ -4,6 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
+            <img src="{{ (asset('/images/OrderlyLogo_final.svg')) }}" id="logo" width="300px" style="margin-bottom: 28px" class="mx-auto d-block" />
+            {{--  {{ URL::asset("../assets/img/OrderlyLogo.svg") }}  --}}
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
 

@@ -99534,6 +99534,7 @@ var Main = function (_Component) {
 
 // Main.propTypes = {
 
+
 // };
 
 // export default Main;
