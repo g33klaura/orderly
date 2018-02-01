@@ -40,6 +40,7 @@ return [
             'prefix' => '',
         ],
 
+        // Local
         'mysql' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -55,6 +56,7 @@ return [
             'engine' => null,
         ],
 
+        // Heroku
         // 'mysql' => [
         //     'driver' => 'mysql',
         //     'host' => env('DB_HOST', 'y0nkiij6humroewt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
@@ -83,8 +85,6 @@ return [
         //     'strict' => true,
         //     'engine' => null,
         // ],
-
-
 
         'pgsql' => [
             'driver' => 'pgsql',
