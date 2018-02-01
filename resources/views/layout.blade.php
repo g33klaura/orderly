@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="app icon" href="{{ asset('favicon.ico') }}" >
     <title>Welcome to Orderly</title>
     <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,400i,600|Dosis" rel="stylesheet">
     <!-- Compiled and minified Materialize CSS -->
