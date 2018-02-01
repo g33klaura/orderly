@@ -71,4 +71,10 @@ My application will take away the stress of having to re-type all those specific
 
 <!-- ![Alt Text](url) -->
 
+#### Credits
+
+Documents icon in logo by Garrett Knoll <https://thenounproject.com/term/documents/137366/>
+
+<br />
+
 *This labor of love is far from complete, but I'll get it there. Thank you for visiting!*  :sparkles:
