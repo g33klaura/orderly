@@ -13,7 +13,7 @@ class Products extends Component {
 
   componentWillMount() {
     /* fetch API in action */
-    fetch('/api/products/', {
+    fetch('/api/blanks/', {
       method: 'GET'
     })
       .then(response => {
@@ -30,7 +30,8 @@ class Products extends Component {
       return (
         <tr key={product.id}>
           <td className='id-column'>{product.id}</td>
-          <td>{product.product_name}</td>
+          <td className='col-sm'>{product.department}</td>
+          <td className='col-sm'>{product.blank_type}</td>
           <td>{product.blank_name}</td>
           <td>{product.blank_color}</td>
         </tr>
@@ -43,11 +44,12 @@ class Products extends Component {
       <Row>
         <Col s={12}>
           
-          <Table className='material-table'>
+          <Table className='material-table' hoverable={true} >
             <thead>
               <tr>
                 <th className='id-column'>ID</th>
-                <th>Name</th>
+                <th className='col-sm'>Department</th>
+                <th className='col-sm'>Product Type</th>
                 <th>Blank</th>
                 <th>Blank Color</th>
               </tr>
