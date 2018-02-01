@@ -94,7 +94,7 @@
         </div>
 
         
-
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
         <!-- Script for React -->
         <script src="{{mix('js/app.js')}}" ></script>
     </body>
