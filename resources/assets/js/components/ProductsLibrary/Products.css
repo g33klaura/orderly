@@ -15,10 +15,23 @@ thead {
   width: calc( 100% - 1em )
 }
 
+th {
+  color: #773FFF;
+}
+
 table {
   width:100%;
 }
 
+/* Table row hover color */
+.highlight tbody tr:hover td, .highlight tbody tr:hover th {
+  background-color: rgba(159, 158, 233, 0.2);
+}
+
 .id-column {
   width: 60px;
+}
+
+.col-sm {
+  width: 120px;
 }

@@ -18421,7 +18421,7 @@ var Products = function (_Component) {
       var _this2 = this;
 
       /* fetch API in action */
-      fetch('/api/products/', {
+      fetch('/api/blanks/', {
         method: 'GET'
       }).then(function (response) {
         return response.json();
@@ -18444,8 +18444,13 @@ var Products = function (_Component) {
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'td',
-            null,
-            product.product_name
+            { className: 'col-sm' },
+            product.department
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'td',
+            { className: 'col-sm' },
+            product.blank_type
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'td',
@@ -18471,7 +18476,7 @@ var Products = function (_Component) {
           { s: 12 },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             __WEBPACK_IMPORTED_MODULE_2_react_materialize__["Table"],
-            { className: 'material-table' },
+            { className: 'material-table', hoverable: true },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'thead',
               null,
@@ -18485,8 +18490,13 @@ var Products = function (_Component) {
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'th',
-                  null,
-                  'Name'
+                  { className: 'col-sm' },
+                  'Department'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'th',
+                  { className: 'col-sm' },
+                  'Product Type'
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'th',
@@ -102779,7 +102789,7 @@ exports = module.exports = __webpack_require__(93)(false);
 
 
 // module
-exports.push([module.i, "tbody {\n  display:block;\n  height:400px;\n  overflow:auto;\n  background-color: rgba(255, 255, 255, 0.6);\n}\n\nthead, tbody tr {\n  display:table;\n  width:100%;\n  table-layout:fixed;\n}\n\nthead {\n  width: calc( 100% - 1em )\n}\n\ntable {\n  width:100%;\n}\n\n.id-column {\n  width: 60px;\n}", ""]);
+exports.push([module.i, "tbody {\n  display:block;\n  height:400px;\n  overflow:auto;\n  background-color: rgba(255, 255, 255, 0.6);\n}\n\nthead, tbody tr {\n  display:table;\n  width:100%;\n  table-layout:fixed;\n}\n\nthead {\n  width: calc( 100% - 1em )\n}\n\nth {\n  color: #773FFF;\n}\n\ntable {\n  width:100%;\n}\n\n/* Table row hover color */\n.highlight tbody tr:hover td, .highlight tbody tr:hover th {\n  background-color: rgba(159, 158, 233, 0.2);\n}\n\n.id-column {\n  width: 60px;\n}\n\n.col-sm {\n  width: 120px;\n}", ""]);
 
 // exports
 
