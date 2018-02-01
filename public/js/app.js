@@ -16635,44 +16635,56 @@ var Export = function (_Component) {
     // this.printDocument = this.printDocument.bind(this);
   }
 
+  // printDocument() {
+  // const input = (document.getElementById('divToPrint'), {
+  //   allowTaint:true,
+  //   logging: true,
+  //   tainTest: false,
+  //   useCORS:true
+  // });
+
+  //   html2canvas(document.body, {
+  //     useCORS: true,
+  //     allowTaint:true,
+  //     logging: true,
+  //     // tainTest: false,
+
+  //   })
+  //   // html2canvas(input)
+  //     .then((canvas) => {
+  //       canvas.crossOrigin = "anonymous";
+  //       document.body.appendChild(canvas);
+  //       const imgData = canvas.toDataURL('image/png');
+  //       console.log(imgData);
+  //       // const pdf = new jsPDF();
+  //       // pdf.addImage(imgData, 'JPEG', 0, 0);
+  //       // // pdf.output('dataurlnewwindow');
+  //       // pdf.save("download.pdf");
+  //     })
+  //     .catch(function (error) {
+  //       console.error('oops, something went wrong!', error);
+  //   });
+  //   // ;
+  // }
+
   _createClass(Export, [{
-    key: 'printDocument',
-    value: function printDocument() {
-      // const input = (document.body, {
-      //   allowTaint:true,
-      //   logging: true,
-      //   tainTest: false,
-      //   useCORS:true
-      // });
-      // const input = (document.getElementById('divToPrint'), {
-      //   allowTaint:true,
-      //   logging: true,
-      //   tainTest: false,
-      //   useCORS:true
-      // });
-
-      __WEBPACK_IMPORTED_MODULE_2_html2canvas___default()(document.body, {
-        useCORS: true,
-        allowTaint: true,
-        logging: true
-        // tainTest: false,
-
-      })
-      // html2canvas(input)
-      .then(function (canvas) {
-        canvas.crossOrigin = "anonymous";
-        document.body.appendChild(canvas);
-        var imgData = canvas.toDataURL('image/png');
-        console.log(imgData);
-        // const pdf = new jsPDF();
-        // pdf.addImage(imgData, 'JPEG', 0, 0);
-        // // pdf.output('dataurlnewwindow');
-        // pdf.save("download.pdf");
-      }).catch(function (error) {
-        console.error('oops, something went wrong!', error);
-      });
-      // ;
+    key: 'toB64',
+    value: function toB64() {
+      var b64;
+      __WEBPACK_IMPORTED_MODULE_2_html2canvas___default()(document.getElementById('divToPrint'), { useCORS: true }).then(function (canvas) {
+        try {
+          b64 = canvas.toDataURL("image/png");
+        } catch (err) {
+          console.log(err);
+          alert(err);
+        }
+        document.getElementById('b-pre').innerText = b64;
+        document.getElementById('b-img').src = b64;
+      }).catch(function onRejected(error) {});
     }
+    // document.getElementById('btn').addEventListener('click',toB64);
+
+
   }, {
     key: 'render',
     value: function render() {
@@ -16686,7 +16698,7 @@ var Export = function (_Component) {
           { className: 'mb5' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'button',
-            { onClick: this.printDocument },
+            { onClick: this.toB64 },
             'Print'
           )
         ),
@@ -16706,6 +16718,13 @@ var Export = function (_Component) {
             'You Can add any component here'
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', null)
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { id: 'result' },
+          'Result:',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'b-img' }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('p', { id: 'b-pre' })
         )
       );
     }
@@ -99533,7 +99552,6 @@ var Main = function (_Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 // Main.propTypes = {
-
 
 // };
 
