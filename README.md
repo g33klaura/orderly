@@ -17,13 +17,13 @@ My application will take away the stress of having to re-type all those specific
 ## Technologies Used
 
 <div align="center">
-<img src="./readme-assets/php.svg" alt="php-logo" height="50" style="margin-right:20px" >
+<img src="./readme-assets/php.svg" alt="php-logo" height="100" style="margin-right:20px" >
 
-<img src="./readme-assets/laravel.svg" alt="laravel-logo" height="50" style="margin-right:20px" >
+<img src="./readme-assets/laravel.svg" alt="laravel-logo" height="100" style="margin-right:20px" >
 
-<img src="./readme-assets/react.svg" alt="react-logo" height="50" style="margin-right:20px" >
+<img src="./readme-assets/react.svg" alt="react-logo" height="100" style="margin-right:20px" >
 
-<img src="./readme-assets/mysql.svg" alt="mysql-logo" height="50" >
+<img src="./readme-assets/mysql.svg" alt="mysql-logo" height="100" >
 
 <br />
 <br />
